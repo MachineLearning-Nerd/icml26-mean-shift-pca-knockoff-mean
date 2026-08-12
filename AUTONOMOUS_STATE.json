@@ -21,8 +21,8 @@
     "4": "verified_scoped_analytical_route_empirical_route_blocked",
     "5": "verified_scoped_finite_grid"
   },
-  "last_checkpoint": "2026-08-12T21:00:00Z",
-  "last_known_git_commit": "b2e06103a0e9e8c0fe85e6b5d232754c057dfe72",
+  "last_checkpoint": "2026-08-12T21:00:07Z",
+  "last_known_git_commit": "534c75c97402b4b9d4f7eb9cf8223dd85e2d683e",
   "publication_allowed": true,
   "live_judge_score": "5/10",
   "official_code_repository": "https://github.com/Mengda-Li/ms-pca",
