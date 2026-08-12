@@ -1,6 +1,6 @@
 # Branch and attribution audit
 
-Captured before the documentation, repository rename, branch rename, and attribution normalization.
+The initial inventory below was captured before the documentation, repository rename, branch rename, and attribution normalization. The final state is recorded at the end of this file.
 
 ## Remote inventory
 
@@ -41,3 +41,12 @@ Before publishing the normalized copy, rewrite every reachable commit's author a
     MachineLearning-Nerd <37579156+MachineLearning-Nerd@users.noreply.github.com>
 
 The rewrite changes identity metadata only. It preserves the claim evidence, branch topology, source links, and release artifacts.
+
+## Final published state
+
+- Repository: MachineLearning-Nerd/icml26-mean-shift-pca-knockoff-mean
+- Default branch: main
+- Published branches: main plus the 11 descriptive audit/release names in the table above
+- Deleted refs: all 11 old ORX branch names
+- Reachable commit identity: MachineLearning-Nerd <37579156+MachineLearning-Nerd@users.noreply.github.com> for both author and committer
+- Branch evidence preserved: yes; the released-implementation audit remains a deliberately diverged branch

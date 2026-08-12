@@ -2,7 +2,7 @@
   "schema_version": 1,
   "paper": "arXiv:2605.25460",
   "phase": "completed_scoped_audit_awaiting_live_judge",
-  "next_action": "rename_repository_normalize_attribution_and_rename_historical_branches",
+  "next_action": "update_collection_tracker_and_select_next_repository",
   "active_run_ids": [],
   "completed_milestones": [
     "claim_1_exact_collision_and_control",
@@ -21,8 +21,8 @@
     "4": "verified_scoped_analytical_route_empirical_route_blocked",
     "5": "verified_scoped_finite_grid"
   },
-  "last_checkpoint": "2026-08-12T20:00:00Z",
-  "last_known_git_commit": "23c4f666caed8fa16d6be0eef9be0a9255f47b7b",
+  "last_checkpoint": "2026-08-12T21:00:00Z",
+  "last_known_git_commit": "b2e06103a0e9e8c0fe85e6b5d232754c057dfe72",
   "publication_allowed": true,
   "live_judge_score": "5/10",
   "official_code_repository": "https://github.com/Mengda-Li/ms-pca",
