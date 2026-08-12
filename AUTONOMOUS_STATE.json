@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "paper": "arXiv:2605.25460",
+  "phase": "completed_scoped_audit_awaiting_live_judge",
+  "next_action": "rename_repository_normalize_attribution_and_rename_historical_branches",
+  "active_run_ids": [],
+  "completed_milestones": [
+    "claim_1_exact_collision_and_control",
+    "claim_2_assumption_counterexample_and_control",
+    "claim_3_literal_algorithm_verifier",
+    "claim_3_released_code_semantics_audit",
+    "claim_4_analytical_calibration",
+    "claim_5_section_4_benchmark",
+    "evaluator_visible_release_candidate",
+    "publication_manifest_and_release_verification"
+  ],
+  "claim_statuses": {
+    "1": "falsified_universal_disjointness_wording",
+    "2": "falsified_under_cited_assumptions_with_centered_control",
+    "3": "verified_scoped_literal_algorithm",
+    "4": "verified_scoped_analytical_route_empirical_route_blocked",
+    "5": "verified_scoped_finite_grid"
+  },
+  "last_checkpoint": "2026-08-12T20:00:00Z",
+  "last_known_git_commit": "23c4f666caed8fa16d6be0eef9be0a9255f47b7b",
+  "publication_allowed": true,
+  "live_judge_score": "5/10",
+  "official_code_repository": "https://github.com/Mengda-Li/ms-pca",
+  "official_code_commit": "540d660761af1d168813e6c80c6bdefcf2557217",
+  "former_github_repository": "https://github.com/MachineLearning-Nerd/icml26-repro-ISNSiAC3n1-mean-shift-pca-by-knockoff-mean",
+  "target_github_repository": "https://github.com/MachineLearning-Nerd/icml26-mean-shift-pca-knockoff-mean",
+  "canonical_branch": "main",
+  "historical_branch_count": 11,
+  "compute_policy": "historical evidence used Hugging Face cpu-upgrade; future evidence must preserve explicit resource and environment pins"
+}
