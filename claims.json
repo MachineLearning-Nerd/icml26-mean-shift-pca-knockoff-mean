@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "repository": "MachineLearning-Nerd/icml26-mean-shift-pca-knockoff-mean",
+  "previous_repository": "MachineLearning-Nerd/icml26-repro-ISNSiAC3n1-mean-shift-pca-by-knockoff-mean",
+  "overall_status": "FALSIFIED_CLAIMS_1_TO_2_VERIFIED_SCOPED_CLAIMS_3_TO_5",
+  "paper": {
+    "title": "Mean-Shift PCA by Knockoff Mean",
+    "arxiv": "2605.25460",
+    "authors": [
+      "Mengda Li",
+      "Zeng Li",
+      "Jianfeng Yao"
+    ],
+    "venue_record": "ICML 2026",
+    "official_code": "https://github.com/Mengda-Li/ms-pca",
+    "official_code_commit": "540d660761af1d168813e6c80c6bdefcf2557217"
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "paper_anchor": "Theorem 3.5",
+      "status": "FALSIFIED",
+      "producer": "reproduce.py::verify_claim_1",
+      "evidence": ["space/artifacts/current/evidence.json", "reports/claim_1/page.md"],
+      "result": {
+        "covariance_location": "14/3",
+        "mean_location": "14/3",
+        "unequal_strength_control_gap": "31/20"
+      },
+      "limitation": "Falsifies universal disjointness wording; does not dispute the union formula or generic unequal-strength separation."
+    },
+    {
+      "id": "C2",
+      "paper_anchor": "Theorem 3.11",
+      "status": "FALSIFIED",
+      "producer": "reproduce.py::verify_claim_2",
+      "evidence": ["space/artifacts/current/evidence.json", "reports/claim_2/page.md"],
+      "result": {
+        "counterexample_residual": 0.2,
+        "centered_control_final_median": 0.0032288661416099264,
+        "centered_control_slope": -0.502738712396082
+      },
+      "limitation": "Applies under the cited assumptions; an unstated centering or isotropic-right-factor condition could change the contract."
+    },
+    {
+      "id": "C3",
+      "paper_anchor": "Algorithm 1",
+      "status": "VERIFIED_SCOPED",
+      "producer": "reproduce.py::verify_claim_3",
+      "evidence": ["space/artifacts/current/evidence.json", "reports/claim_3/page.md"],
+      "result": {
+        "joint_success_rate": 0.9166666666666666,
+        "covariance_kept_rate": 0.9166666666666666,
+        "mean_removed_rate": 1.0,
+        "sample_sizes": [500, 1000, 2000],
+        "trials_per_size": 12
+      },
+      "limitation": "Finite Gaussian regime and paper-text eigenvalue algorithm only."
+    },
+    {
+      "id": "C4",
+      "paper_anchor": "Section 2 fluctuation discussion",
+      "status": "VERIFIED_SCOPED",
+      "producer": "reproduce.py::verify_claim_4_analytical",
+      "evidence": ["space/artifacts/current/evidence.json", "reports/claim_4/page.md"],
+      "result": {
+        "analytical_steps_checked": true,
+        "empirical_route": "BLOCKED",
+        "edge_location": 2.914213562373095,
+        "outlier_location": 3.75
+      },
+      "limitation": "Gaussian, supercritical, right-invariant route; no broad non-Gaussian or BBP-critical claim."
+    },
+    {
+      "id": "C5",
+      "paper_anchor": "Section 4",
+      "status": "VERIFIED_SCOPED",
+      "producer": "reproduce.py::verify_claim_5",
+      "evidence": ["space/artifacts/current/evidence.json", "space/artifacts/current/claim5_trials.csv", "reports/claim_5/page.md"],
+      "result": {
+        "ms_pca_alignment": 0.9403016931618414,
+        "pca_alignment": 0.08584453793620149,
+        "robust_pca_alignment": 0.07908832402231025,
+        "paired_win_rate_over_pca": 0.9444444444444444,
+        "paired_win_rate_over_robust_pca": 0.9166666666666666
+      },
+      "limitation": "Finite disclosed grid; Robust PCA comparison is limited to 12 paired n=500 trials."
+    }
+  ],
+  "attribution": {
+    "name": "MachineLearning-Nerd",
+    "email": "37579156+MachineLearning-Nerd@users.noreply.github.com",
+    "author_and_committer_required": true,
+    "co_author_trailers_allowed": false
+  }
+}

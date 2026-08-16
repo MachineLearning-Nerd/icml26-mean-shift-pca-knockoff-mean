@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this audit or its recorded outputs, please cite the original paper and this repository."
+title: "ICML 2026 Mean-Shift PCA by Knockoff Mean Audit"
+version: "1.0.0"
+date-released: 2026-08-17
+authors:
+  - name: MachineLearning-Nerd
+repository-code: "https://github.com/MachineLearning-Nerd/icml26-mean-shift-pca-knockoff-mean"
+url: "https://github.com/MachineLearning-Nerd/icml26-mean-shift-pca-knockoff-mean"
+references:
+  - type: article
+    title: "Mean-Shift PCA by Knockoff Mean"
+    authors:
+      - given-names: Mengda
+        family-names: Li
+      - given-names: Zeng
+        family-names: Li
+      - given-names: Jianfeng
+        family-names: Yao
+    year: 2026
+    url: "https://arxiv.org/abs/2605.25460"
+    identifiers:
+      - type: arxiv
+        value: "2605.25460"

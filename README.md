@@ -13,13 +13,31 @@ Current status: **completed scoped audit, awaiting live judge review**. The audi
 | Primary record | [arXiv:2605.25460](https://arxiv.org/abs/2605.25460) |
 | Venue note | arXiv record marked ICML 2026 |
 | Author implementation | [Mengda-Li/ms-pca](https://github.com/Mengda-Li/ms-pca) |
-| Author implementation pin | main commit 540d660761af1d168813e6c80c6bdefcf2557217 |
+| Author implementation pin | API-verified main commit 540d660761af1d168813e6c80c6bdefcf2557217 (2026-08-17) |
+| Paper source pin | ar5iv HTML retrieved 2026-08-01; SHA-256 02f4714097d3681f770d35ed958b53bc44cddac13d97916ea1510dd08e078399 |
 | Collection | ICML 2026 reproduction collection |
 | Former repository | icml26-repro-ISNSiAC3n1-mean-shift-pca-by-knockoff-mean |
 | Current repository | [MachineLearning-Nerd/icml26-mean-shift-pca-knockoff-mean](https://github.com/MachineLearning-Nerd/icml26-mean-shift-pca-knockoff-mean) |
 | Canonical branch | main |
 
 The paper proposes a two-stage PCA procedure that adds a controlled knockoff mean shift. The original sample eigenvalues are compared with the perturbed eigenvalues: a mean-shift component should move, while an eigenvalue caused by the uncontaminated covariance should remain stable.
+
+## Audit dossier
+
+The repository-level audit record is split into small, reviewable files:
+
+- `CLAIM_EVIDENCE.md` maps each paper claim to its producer, raw output, controls, status, and limitation.
+- `SOURCE_AUDIT.md` pins the paper source and the current author implementation.
+- `BRANCH_AUDIT.md` records every branch, its former name, purpose, and attribution check.
+- `ENVIRONMENT.md` records the fixed command, historical compute, and artifact paths.
+- `REPORT.md` gives the conservative release decision.
+- `CITATION.cff` and `AUTHOR_THANK_YOU.md` provide citation and author acknowledgment.
+- `claims.json` and `EVIDENCE_MANIFEST.json` provide machine-readable statuses and hashes.
+- `verify_final.py` checks the public branch topology, evidence files, and canonical commit history.
+
+The final public topology is `main` plus 11 descriptive `audit/` and
+`release/` branches. Historical `orx/` names are retained only as migration
+history in the branch audit; they are not live branch names.
 
 ## What the paper is doing
 
@@ -79,6 +97,7 @@ The cumulative verifier is reproduce.py. It produces a delimited EVIDENCE_JSON r
 - Release hashes: space/artifacts/current/release/upload_manifest.sha256 and judged_manifest.sha256
 - Published tutorial: notebooks/mean_shift_pca_reproduction.py
 - Historical contract and gap analysis: .openresearch/artifacts/ and audits/
+- Final-state structural check: verify_final.py
 
 ## Reproduce the recorded verifier
 

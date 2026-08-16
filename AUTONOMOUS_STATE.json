@@ -1,7 +1,7 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "paper": "arXiv:2605.25460",
-  "phase": "completed_scoped_audit_awaiting_live_judge",
+  "phase": "completed_scoped_audit_dossier_published",
   "next_action": "update_collection_tracker_and_select_next_repository",
   "active_run_ids": [],
   "completed_milestones": [
@@ -12,24 +12,71 @@
     "claim_4_analytical_calibration",
     "claim_5_section_4_benchmark",
     "evaluator_visible_release_candidate",
-    "publication_manifest_and_release_verification"
+    "publication_manifest_and_release_verification",
+    "paper_source_pinned",
+    "author_code_current_head_audited",
+    "claim_to_evidence_dossier_written",
+    "descriptive_branch_topology_verified",
+    "canonical_attribution_verified",
+    "final_state_verifier_added"
   ],
   "claim_statuses": {
-    "1": "falsified_universal_disjointness_wording",
-    "2": "falsified_under_cited_assumptions_with_centered_control",
-    "3": "verified_scoped_literal_algorithm",
-    "4": "verified_scoped_analytical_route_empirical_route_blocked",
-    "5": "verified_scoped_finite_grid"
+    "1": "FALSIFIED",
+    "2": "FALSIFIED",
+    "3": "VERIFIED_SCOPED",
+    "4": "VERIFIED_SCOPED",
+    "5": "VERIFIED_SCOPED"
   },
-  "last_checkpoint": "2026-08-12T21:00:07Z",
-  "last_known_git_commit": "534c75c97402b4b9d4f7eb9cf8223dd85e2d683e",
+  "last_checkpoint": "2026-08-17T00:00:00Z",
+  "last_known_git_commit": "747b344d70ca5f6fed5d61bcd7be561f6569e171",
+  "last_scientific_evidence_commit": "13b55da6455a15560c274deb9f06ce0a0214ebe0",
   "publication_allowed": true,
   "live_judge_score": "5/10",
   "official_code_repository": "https://github.com/Mengda-Li/ms-pca",
   "official_code_commit": "540d660761af1d168813e6c80c6bdefcf2557217",
+  "official_code_observed_at": "2026-08-17",
+  "paper_source": {
+    "url": "https://ar5iv.labs.arxiv.org/html/2605.25460",
+    "retrieved_at": "2026-08-01T19:13:37Z",
+    "sha256": "02f4714097d3681f770d35ed958b53bc44cddac13d97916ea1510dd08e078399"
+  },
   "former_github_repository": "https://github.com/MachineLearning-Nerd/icml26-repro-ISNSiAC3n1-mean-shift-pca-by-knockoff-mean",
   "target_github_repository": "https://github.com/MachineLearning-Nerd/icml26-mean-shift-pca-knockoff-mean",
   "canonical_branch": "main",
+  "public_branches": [
+    "main",
+    "audit/claim-1-spectral-separability",
+    "audit/claim-2-eigenspace-invariance",
+    "audit/claim-3-algorithm-1",
+    "audit/claim-3-released-implementation",
+    "audit/claim-4-analytical-calibration",
+    "audit/claim-4-empirical-fluctuations",
+    "audit/claim-5-section-4-benchmark",
+    "release/evaluator-visible-candidate",
+    "release/final-gates",
+    "release/post-publication-verification",
+    "release/publication-manifest"
+  ],
   "historical_branch_count": 11,
-  "compute_policy": "historical evidence used Hugging Face cpu-upgrade; future evidence must preserve explicit resource and environment pins"
+  "branch_names_clean": true,
+  "canonical_identity": {
+    "name": "MachineLearning-Nerd",
+    "email": "37579156+MachineLearning-Nerd@users.noreply.github.com",
+    "author_and_committer_required": true,
+    "co_author_trailers_allowed": false
+  },
+  "compute_policy": "Historical evidence used Hugging Face cpu-upgrade with 8 vCPUs, 32 GB, and no GPU. Future evidence must preserve explicit resource and environment pins.",
+  "audit_dossier": {
+    "status": "published_scoped_audit",
+    "claim_evidence": "CLAIM_EVIDENCE.md",
+    "source_audit": "SOURCE_AUDIT.md",
+    "branch_audit": "BRANCH_AUDIT.md",
+    "environment": "ENVIRONMENT.md",
+    "report": "REPORT.md",
+    "citation": "CITATION.cff",
+    "author_thank_you": "AUTHOR_THANK_YOU.md",
+    "machine_readable_claims": "claims.json",
+    "evidence_manifest": "EVIDENCE_MANIFEST.json",
+    "final_verifier": "verify_final.py"
+  }
 }
