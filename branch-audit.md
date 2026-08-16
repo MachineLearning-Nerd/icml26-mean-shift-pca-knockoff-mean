@@ -29,6 +29,7 @@ roles visible for readers following old experiment links.
   names above.
 - Pre-dossier unique reachable commits: 19.
 - Pre-dossier main tip: `747b344d70ca5f6fed5d61bcd7be561f6569e171`
+- Published dossier tip: `3d1fb6b6c337e9489c0bc37c1137023e722c8735`
 - All pre-dossier reachable author and committer identities:
   `MachineLearning-Nerd <37579156+MachineLearning-Nerd@users.noreply.github.com>`
 - Legacy `orx/*` branch refs: absent from the GitHub API response.

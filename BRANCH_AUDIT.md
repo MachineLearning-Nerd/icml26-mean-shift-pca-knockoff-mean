@@ -22,10 +22,11 @@ branch uses that prefix.
 | `release/publication-manifest` | `orx/publication-manifest-and-release-report` | Publication manifest and release report | `c4a8ee35e5be24b6d081f47f44d4822af68c13ae` |
 
 The pre-dossier snapshot contains 12 public branches and 19 unique reachable
-commits. The cumulative `main` line has 18 commits; the released-implementation
-branch intentionally diverges from the common claim-audit line. The dossier
-commits are added to `main` only and do not erase or rewrite any evidence
-branch.
+commits. The cumulative `main` line had 18 commits; the
+released-implementation branch intentionally diverges from the common
+claim-audit line. The first dossier commit on `main` is
+`3d1fb6b6c337e9489c0bc37c1137023e722c8735`. Dossier metadata updates
+remain on `main` only and do not erase or rewrite any evidence branch.
 
 ## Attribution and safety record
 

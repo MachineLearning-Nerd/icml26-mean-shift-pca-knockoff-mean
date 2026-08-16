@@ -27,8 +27,8 @@
     "4": "VERIFIED_SCOPED",
     "5": "VERIFIED_SCOPED"
   },
-  "last_checkpoint": "2026-08-17T00:00:00Z",
-  "last_known_git_commit": "747b344d70ca5f6fed5d61bcd7be561f6569e171",
+  "last_checkpoint": "2026-08-16T21:02:28Z",
+  "last_known_git_commit": "3d1fb6b6c337e9489c0bc37c1137023e722c8735",
   "last_scientific_evidence_commit": "13b55da6455a15560c274deb9f06ce0a0214ebe0",
   "publication_allowed": true,
   "live_judge_score": "5/10",
