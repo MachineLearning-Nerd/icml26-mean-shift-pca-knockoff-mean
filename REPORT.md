@@ -2,6 +2,10 @@
 
 ## Decision
 
+Machine-readable overall verdict: `FALSIFIED_CLAIMS_1_TO_2_VERIFIED_SCOPED_CLAIMS_3_TO_5`.
+`publication_allowed=true` is limited to this scoped audit dossier;
+`score_claim=false` and `official_author_endorsement=false`.
+
 **FALSIFIED_CLAIMS_1_TO_2_VERIFIED_SCOPED_CLAIMS_3_TO_5**
 
 The repository is a scoped, published audit of all five paper targets. Claims

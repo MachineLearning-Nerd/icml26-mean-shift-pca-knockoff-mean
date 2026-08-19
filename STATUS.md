@@ -11,7 +11,7 @@
 - Public branches: main plus 11 descriptive audit/release branches
 - Branch cleanup: complete; no live `orx/*` branch remains
 - Commit attribution: all reachable commits use MachineLearning-Nerd as author and committer
-- Current phase: completed scoped audit, awaiting live judge review
+- Current phase: published_scoped_audit
 - Live judge score: 5/10, retained as provenance and not a scientific result
 - Compute: historical Hugging Face `cpu-upgrade`, 8 vCPUs, 32 GB, no GPU
 - Official code status: public; paper-text Algorithm 1 and released `main.py` are audited as separate semantics
@@ -25,4 +25,7 @@
 - Claim 5: **VERIFIED_SCOPED** within `c = 1`, 5% contamination, `n = 500/1000/2000`; Robust PCA comparison limited to 12 paired `n = 500` trials.
 
 Publication status: published as a scoped audit with citation, author thanks,
-claim-to-evidence ledger, source pin, branch map, and final-state verifier.
+claim-to-evidence ledger, source pin, branch map, reproduction verdicts, and
+final-state verifier. publication_allowed=true applies only to this scoped
+dossier; score_claim=false and official_author_endorsement=false.
+Overall verdict: FALSIFIED_CLAIMS_1_TO_2_VERIFIED_SCOPED_CLAIMS_3_TO_5

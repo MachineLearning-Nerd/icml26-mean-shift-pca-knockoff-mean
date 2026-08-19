@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "paper": "arXiv:2605.25460",
-  "phase": "completed_scoped_audit_dossier_published",
+  "phase": "published_scoped_audit",
   "next_action": "update_collection_tracker_and_select_next_repository",
   "active_run_ids": [],
   "completed_milestones": [
@@ -27,10 +27,14 @@
     "4": "VERIFIED_SCOPED",
     "5": "VERIFIED_SCOPED"
   },
-  "last_checkpoint": "2026-08-16T21:02:28Z",
-  "last_known_git_commit": "3d1fb6b6c337e9489c0bc37c1137023e722c8735",
+  "last_checkpoint": "2026-08-19T15:08:00+05:30",
+  "last_known_git_commit": "ab2f1f51b134a62faa01d677e45f0ed081dab9cd",
   "last_scientific_evidence_commit": "13b55da6455a15560c274deb9f06ce0a0214ebe0",
   "publication_allowed": true,
+  "overall_verdict": "FALSIFIED_CLAIMS_1_TO_2_VERIFIED_SCOPED_CLAIMS_3_TO_5",
+  "publication_boundary": "SCOPED_AUDIT_ONLY",
+  "score_claim": false,
+  "official_author_endorsement": false,
   "live_judge_score": "5/10",
   "official_code_repository": "https://github.com/Mengda-Li/ms-pca",
   "official_code_commit": "540d660761af1d168813e6c80c6bdefcf2557217",
@@ -58,12 +62,14 @@
     "release/publication-manifest"
   ],
   "historical_branch_count": 11,
+  "branch_count": 12,
   "branch_names_clean": true,
   "canonical_identity": {
     "name": "MachineLearning-Nerd",
     "email": "37579156+MachineLearning-Nerd@users.noreply.github.com",
     "author_and_committer_required": true,
-    "co_author_trailers_allowed": false
+    "co_author_trailers_allowed": false,
+    "verified_reachable_commits": 21
   },
   "compute_policy": "Historical evidence used Hugging Face cpu-upgrade with 8 vCPUs, 32 GB, and no GPU. Future evidence must preserve explicit resource and environment pins.",
   "audit_dossier": {
@@ -76,6 +82,7 @@
     "citation": "CITATION.cff",
     "author_thank_you": "AUTHOR_THANK_YOU.md",
     "machine_readable_claims": "claims.json",
+    "reproduction_verdicts": "reproduction_verdicts.json",
     "evidence_manifest": "EVIDENCE_MANIFEST.json",
     "final_verifier": "verify_final.py"
   }

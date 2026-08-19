@@ -12,7 +12,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 EXPECTED_REPOSITORY = "MachineLearning-Nerd/icml26-mean-shift-pca-knockoff-mean"
 CANONICAL_NAME = "MachineLearning-Nerd"
-CANONICAL_EMAIL = "37579156+MachineLearning-Nerd@users.noreply.github.com"
+CANONICAL_EMAIL = "MachineLearning-Nerd@users.noreply.github.com"
+EXPECTED_OVERALL_VERDICT = "FALSIFIED_CLAIMS_1_TO_2_VERIFIED_SCOPED_CLAIMS_3_TO_5"
 EXPECTED_BRANCHES = {
     "main",
     "audit/claim-1-spectral-separability",
@@ -34,6 +35,14 @@ EXPECTED_CLAIMS = {
     "C4": "VERIFIED_SCOPED",
     "C5": "VERIFIED_SCOPED",
 }
+EXPECTED_HASHES = {
+    "README.md": "192b5bf44fa15f8682fe8db5298b975e24fb6b4e3428a1abe99acb387dd0544e",
+    "STATUS.md": "ca44ef3815c9535074a19eae3dbda3107fcb393d602dacc9e7d2658964e033a8",
+    "REPORT.md": "ffa5c3dad1fb8e2af20a186039372ff86b72ccd835dd36fd4bd1f954e3d4e72b",
+    "claims.json": "ee2624fd8b05123c7dabd48eda3cd09b79521da0fc6c7e26e04147fd0b080df4",
+    "reproduction_verdicts.json": "19e90f7c24cbbea7132853f22ed7a106af2e156284a96ee297831a7f9ea3350b",
+    "AUTONOMOUS_STATE.json": "e7c2a8c67adf13dc16dbbbf7e983554237546a83a86fefe9a136bc05a73af20c",
+}
 REQUIRED_FILES = {
     "README.md",
     "STATUS.md",
@@ -45,6 +54,7 @@ REQUIRED_FILES = {
     "AUTHOR_THANK_YOU.md",
     "CITATION.cff",
     "claims.json",
+    "reproduction_verdicts.json",
     "EVIDENCE_MANIFEST.json",
     "verify_final.py",
     "AUTONOMOUS_STATE.json",
@@ -155,9 +165,15 @@ def verify_manifest() -> None:
         fail("manifest repository marker is wrong")
     if manifest.get("claim_statuses") != EXPECTED_CLAIMS:
         fail("manifest claim statuses are wrong")
-    expected_audit_files = {
-        path for path in REQUIRED_FILES if path != "AUTONOMOUS_STATE.json"
-    }
+    if manifest.get("overall_verdict") != EXPECTED_OVERALL_VERDICT:
+        fail("manifest overall verdict is wrong")
+    if manifest.get("publication_allowed") is not True:
+        fail("manifest publication boundary is wrong")
+    if manifest.get("score_claim") is not False:
+        fail("manifest score boundary is wrong")
+    if manifest.get("official_author_endorsement") is not False:
+        fail("manifest author-endorsement boundary is wrong")
+    expected_audit_files = REQUIRED_FILES
     if set(manifest.get("required_audit_files", [])) != expected_audit_files:
         fail("manifest audit-file list is wrong")
     if set(manifest.get("branches", {}).get("expected_final", [])) != EXPECTED_BRANCHES:
@@ -176,6 +192,14 @@ def verify_manifest() -> None:
             fail(f"missing content-addressed artifact: {relative_path}")
         if sha256(relative_path) != expected_hash:
             fail(f"artifact hash mismatch: {relative_path}")
+    artifact_hashes = {
+        item["path"]: item["sha256"] for item in artifacts
+    }
+    for relative_path, expected_hash in EXPECTED_HASHES.items():
+        if artifact_hashes.get(relative_path) != expected_hash:
+            fail(f"reader-document hash is not pinned: {relative_path}")
+        if expected_hash != "PENDING" and sha256(relative_path) != expected_hash:
+            fail(f"reader-document hash mismatch: {relative_path}")
 
 
 def verify_evidence() -> None:
@@ -219,6 +243,14 @@ def verify_evidence() -> None:
 def verify_ledgers_and_state() -> None:
     claims = read_json("claims.json")
     state = read_json("AUTONOMOUS_STATE.json")
+    if claims.get("overall_verdict") != EXPECTED_OVERALL_VERDICT:
+        fail("claims overall verdict is wrong")
+    if claims.get("publication_allowed") is not True:
+        fail("claims publication boundary is wrong")
+    if claims.get("score_claim") is not False:
+        fail("claims score boundary is wrong")
+    if claims.get("official_author_endorsement") is not False:
+        fail("claims author-endorsement boundary is wrong")
     if {row.get("id"): row.get("status") for row in claims["claims"]} != EXPECTED_CLAIMS:
         fail("claims.json statuses are wrong")
     if state.get("target_github_repository") != (
@@ -233,6 +265,34 @@ def verify_ledgers_and_state() -> None:
         fail("state canonical branch is wrong")
     if state.get("canonical_identity", {}).get("name") != CANONICAL_NAME:
         fail("state canonical identity is wrong")
+    if state.get("overall_verdict") != EXPECTED_OVERALL_VERDICT:
+        fail("state overall verdict is wrong")
+    if state.get("publication_allowed") is not True:
+        fail("state publication boundary is wrong")
+    if state.get("score_claim") is not False:
+        fail("state score boundary is wrong")
+    if state.get("official_author_endorsement") is not False:
+        fail("state author-endorsement boundary is wrong")
+    if state.get("branch_count") != len(EXPECTED_BRANCHES):
+        fail("state branch count is wrong")
+    if state.get("canonical_identity", {}).get("verified_reachable_commits") != 21:
+        fail("state reachable-commit checkpoint is wrong")
+
+    reproduction = read_json("reproduction_verdicts.json")
+    if reproduction.get("repository") != EXPECTED_REPOSITORY:
+        fail("reproduction verdict repository is wrong")
+    if reproduction.get("overall_verdict") != EXPECTED_OVERALL_VERDICT:
+        fail("reproduction verdict is wrong")
+    if reproduction.get("publication_allowed") is not True:
+        fail("reproduction publication boundary is wrong")
+    if reproduction.get("score_claim") is not False:
+        fail("reproduction score boundary is wrong")
+    if reproduction.get("official_author_endorsement") is not False:
+        fail("reproduction author-endorsement boundary is wrong")
+    if {
+        row.get("id"): row.get("status") for row in reproduction["claims"]
+    } != EXPECTED_CLAIMS:
+        fail("reproduction claim statuses are wrong")
 
 
 def verify_documentation() -> None:
@@ -246,6 +306,11 @@ def verify_documentation() -> None:
         "AUTHOR_THANK_YOU.md",
         "FALSIFIED",
         "VERIFIED",
+        "reproduction_verdicts.json",
+        "AUTONOMOUS_STATE.json",
+        "publication_allowed",
+        "score_claim",
+        "official_author_endorsement",
         "verify_final.py",
     ):
         if marker not in readme:

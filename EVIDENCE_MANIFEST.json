@@ -1,6 +1,11 @@
 {
   "schema_version": 1,
   "repository": "MachineLearning-Nerd/icml26-mean-shift-pca-knockoff-mean",
+  "overall_verdict": "FALSIFIED_CLAIMS_1_TO_2_VERIFIED_SCOPED_CLAIMS_3_TO_5",
+  "publication_allowed": true,
+  "publication_boundary": "SCOPED_AUDIT_ONLY",
+  "score_claim": false,
+  "official_author_endorsement": false,
   "paper": "arXiv:2605.25460",
   "claim_statuses": {
     "C1": "FALSIFIED",
@@ -32,7 +37,13 @@
     {"path": "space/artifacts/current/release/red_team.json", "sha256": "9972f8079985b13f9bb6f59bf89165df1f9130030e3910d17dbb6ac3a8fe66ff"},
     {"path": "space/artifacts/current/judged_manifest.sha256", "sha256": "831312209047c9ff7e2f0207d40493413764ffdab3ca6a67902fbf396c2c6ae9"},
     {"path": "space/artifacts/current/pyproject.toml", "sha256": "d2c997d1144ccc7bca709905ea81d9e6fffda68b68e80023912dcaefee212863"},
-    {"path": "space/artifacts/current/uv.lock", "sha256": "2c4466c22c47affd7ac5e210a23a3c985950e3f6d727df9ecda6bfd9f198f50e"}
+    {"path": "space/artifacts/current/uv.lock", "sha256": "2c4466c22c47affd7ac5e210a23a3c985950e3f6d727df9ecda6bfd9f198f50e"},
+    {"path": "README.md", "sha256": "192b5bf44fa15f8682fe8db5298b975e24fb6b4e3428a1abe99acb387dd0544e"},
+    {"path": "STATUS.md", "sha256": "ca44ef3815c9535074a19eae3dbda3107fcb393d602dacc9e7d2658964e033a8"},
+    {"path": "REPORT.md", "sha256": "ffa5c3dad1fb8e2af20a186039372ff86b72ccd835dd36fd4bd1f954e3d4e72b"},
+    {"path": "claims.json", "sha256": "ee2624fd8b05123c7dabd48eda3cd09b79521da0fc6c7e26e04147fd0b080df4"},
+    {"path": "reproduction_verdicts.json", "sha256": "19e90f7c24cbbea7132853f22ed7a106af2e156284a96ee297831a7f9ea3350b"},
+    {"path": "AUTONOMOUS_STATE.json", "sha256": "e7c2a8c67adf13dc16dbbbf7e983554237546a83a86fefe9a136bc05a73af20c"}
   ],
   "required_audit_files": [
     "README.md",
@@ -45,6 +56,8 @@
     "AUTHOR_THANK_YOU.md",
     "CITATION.cff",
     "claims.json",
+    "reproduction_verdicts.json",
+    "AUTONOMOUS_STATE.json",
     "EVIDENCE_MANIFEST.json",
     "verify_final.py"
   ],

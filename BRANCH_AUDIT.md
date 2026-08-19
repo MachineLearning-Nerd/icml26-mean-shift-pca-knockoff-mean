@@ -31,15 +31,15 @@ remain on `main` only and do not erase or rewrite any evidence branch.
 ## Attribution and safety record
 
 - Repository: `MachineLearning-Nerd/icml26-mean-shift-pca-knockoff-mean`.
-- Recovery bundle before dossier changes:
-  `/tmp/icml-mean-shift-before-dossier.3ewDID/mean-shift-before-dossier.bundle`.
+- Recovery bundle before attribution normalization:
+  `/tmp/icml26-mean-shift-history.Q2Jx2O/pre-attribution.bundle`.
 - Recovery bundle SHA-256:
-  `3c79b3fd7950b7e0ae49ad972797a90534d3d268287eae522eff806f264abd4b`.
+  `68094368221b45f48831b14b0dbe1e1941fd5e16d5ed3bb88a5119c29d7c5eaf`.
 - The pre-dossier remote was read back through the GitHub API and local refs.
-- Every reachable pre-dossier commit already had both author and committer
-  set to `MachineLearning-Nerd
-  <37579156+MachineLearning-Nerd@users.noreply.github.com>`.
-- The dossier commit is created with the same canonical identity; no
+- Every reachable published commit now has both author and committer set to
+  `MachineLearning-Nerd
+  <MachineLearning-Nerd@users.noreply.github.com>`.
+- The dossier commits use the same canonical identity; no
   `Co-authored-by:` trailers are allowed.
 - No `refs/original/*`, legacy `orx/*`, or untracked branch rename is part
   of the final public inventory.

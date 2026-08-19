@@ -3,6 +3,10 @@
   "repository": "MachineLearning-Nerd/icml26-mean-shift-pca-knockoff-mean",
   "previous_repository": "MachineLearning-Nerd/icml26-repro-ISNSiAC3n1-mean-shift-pca-by-knockoff-mean",
   "overall_status": "FALSIFIED_CLAIMS_1_TO_2_VERIFIED_SCOPED_CLAIMS_3_TO_5",
+  "overall_verdict": "FALSIFIED_CLAIMS_1_TO_2_VERIFIED_SCOPED_CLAIMS_3_TO_5",
+  "publication_allowed": true,
+  "score_claim": false,
+  "official_author_endorsement": false,
   "paper": {
     "title": "Mean-Shift PCA by Knockoff Mean",
     "arxiv": "2605.25460",

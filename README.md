@@ -2,7 +2,9 @@
 
 Claim-by-claim reproduction and audit record for the ICML 2026 paper by Mengda Li, Zeng Li, and Jianfeng Yao.
 
-Current status: **completed scoped audit, awaiting live judge review**. The audit records five claim verdicts, preserves the exact evidence and controls, and keeps the historical claim and release branches under clean names. The recorded live judge score is 5/10; that score is not a scientific claim.
+Current status: **published scoped audit**. The audit records five claim verdicts, preserves the exact evidence and controls, and keeps the historical claim and release branches under clean names. The recorded historical judge score is 5/10; it is provenance only, not a current score or scientific claim.
+
+Publication boundary: \`publication_allowed=true\` means this scoped audit dossier may be published; \`score_claim=false\` and \`official_author_endorsement=false\` remain explicit. The repository does not claim a full-paper reproduction, unrestricted theorem validation, or a changed judge score.
 
 ## Paper and provenance
 
@@ -32,7 +34,9 @@ The repository-level audit record is split into small, reviewable files:
 - `ENVIRONMENT.md` records the fixed command, historical compute, and artifact paths.
 - `REPORT.md` gives the conservative release decision.
 - `CITATION.cff` and `AUTHOR_THANK_YOU.md` provide citation and author acknowledgment.
-- `claims.json` and `EVIDENCE_MANIFEST.json` provide machine-readable statuses and hashes.
+- `claims.json` and `reproduction_verdicts.json` provide machine-readable statuses, verdicts, and boundaries.
+- `EVIDENCE_MANIFEST.json` provides content-addressed evidence and reader-document hashes.
+- `AUTONOMOUS_STATE.json` records durable continuation and publication state.
 - `verify_final.py` checks the public branch topology, evidence files, and canonical commit history.
 
 The final public topology is `main` plus 11 descriptive `audit/` and
