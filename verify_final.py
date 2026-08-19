@@ -39,7 +39,7 @@ EXPECTED_HASHES = {
     "README.md": "192b5bf44fa15f8682fe8db5298b975e24fb6b4e3428a1abe99acb387dd0544e",
     "STATUS.md": "ca44ef3815c9535074a19eae3dbda3107fcb393d602dacc9e7d2658964e033a8",
     "REPORT.md": "ffa5c3dad1fb8e2af20a186039372ff86b72ccd835dd36fd4bd1f954e3d4e72b",
-    "claims.json": "ee2624fd8b05123c7dabd48eda3cd09b79521da0fc6c7e26e04147fd0b080df4",
+    "claims.json": "fcc07267edcbfe35123b4907e5ca6f64074c1e5a7a44675c1aac3fed46b48c80",
     "reproduction_verdicts.json": "19e90f7c24cbbea7132853f22ed7a106af2e156284a96ee297831a7f9ea3350b",
     "AUTONOMOUS_STATE.json": "e7c2a8c67adf13dc16dbbbf7e983554237546a83a86fefe9a136bc05a73af20c",
 }

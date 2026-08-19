@@ -41,7 +41,7 @@
     {"path": "README.md", "sha256": "192b5bf44fa15f8682fe8db5298b975e24fb6b4e3428a1abe99acb387dd0544e"},
     {"path": "STATUS.md", "sha256": "ca44ef3815c9535074a19eae3dbda3107fcb393d602dacc9e7d2658964e033a8"},
     {"path": "REPORT.md", "sha256": "ffa5c3dad1fb8e2af20a186039372ff86b72ccd835dd36fd4bd1f954e3d4e72b"},
-    {"path": "claims.json", "sha256": "ee2624fd8b05123c7dabd48eda3cd09b79521da0fc6c7e26e04147fd0b080df4"},
+    {"path": "claims.json", "sha256": "fcc07267edcbfe35123b4907e5ca6f64074c1e5a7a44675c1aac3fed46b48c80"},
     {"path": "reproduction_verdicts.json", "sha256": "19e90f7c24cbbea7132853f22ed7a106af2e156284a96ee297831a7f9ea3350b"},
     {"path": "AUTONOMOUS_STATE.json", "sha256": "e7c2a8c67adf13dc16dbbbf7e983554237546a83a86fefe9a136bc05a73af20c"}
   ],
@@ -112,7 +112,7 @@
   },
   "attribution": {
     "name": "MachineLearning-Nerd",
-    "email": "37579156+MachineLearning-Nerd@users.noreply.github.com",
+    "email": "MachineLearning-Nerd@users.noreply.github.com",
     "author_and_committer_required": true,
     "co_author_trailers_allowed": false
   }
